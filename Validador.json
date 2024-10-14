@@ -1,0 +1,23 @@
+function validador() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Validación del correo electrónico (ejemplo básico)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        alert('Por favor, ingresa un correo electrónico válido.');
+        return false;
+    }
+
+    // Validación de la contraseña (ejemplo básico)
+    if (password.length < 8) {
+        alert('La contraseña debe tener al menos 8 caracteres.');
+        return false;
+    }
+    // Puedes agregar más validaciones aquí, como exigir al menos una mayúscula, un número, etc.
+
+    // Aquí llamarías a una función para enviar los datos al servidor y verificar las credenciales
+    // ...
+
+    return true;
+}
